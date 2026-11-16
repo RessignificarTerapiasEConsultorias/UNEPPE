@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNEPPE | Associe-se: saúde, defesa jurídica e seguro de vida para escrivães de Polícia</title>
+<meta name="description" content="Associe-se à UNEPPE, a União dos Escrivães de Polícia de Pernambuco: consultas médicas sem custo, assistência jurídica da atividade policial, seguro de vida e auxílio funerário.">
+<meta name="theme-color" content="#052B4A">
+
+<!-- Pré-visualização ao compartilhar o link (WhatsApp, Facebook).
+     Os endereços completos assumem que o site fica em uneppe.com.br; ajuste se for outro. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Você faz o processo valer. Quem faz a sua proteção valer?">
+<meta property="og:description" content="UNEPPE: saúde, defesa jurídica, seguro de vida e auxílio funerário para escrivães de Polícia. Fale direto com o presidente.">
+<meta property="og:url" content="https://uneppe.com.br/">
+<meta property="og:image" content="https://uneppe.com.br/assets/img/og.jpg">
+
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+
+<!-- META PIXEL: cole aqui o código do Pixel quando a conta de anúncios estiver pronta.
+     Os botões de WhatsApp já disparam o evento "Contact" se o Pixel existir. -->
+
+<style>
+:root {
+  --navy-950: #052B4A;
+  --navy-900: #063556;
+  --navy-700: #03436F;
+  --indigo: #37437F;
+  --ink: #12263A;
+  --ink-soft: #46586B;
+  --sky: #A9C4DD;
+  --paper: #EEF2F6;
+  --white: #FFFFFF;
+  --rule: #CBD6E1;
+  --flag-red: #EB3237;
+  --flag-yellow: #F5D90A;
+  --flag-green: #01A85A;
+  --display: "Barlow Condensed", "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --wrap: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3, p, ul, ol, dl, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+:focus-visible { outline: 3px solid var(--flag-yellow); outline-offset: 3px; }
+
+.wrap { width: min(100% - 2.5rem, var(--wrap)); margin-inline: auto; }
+
+.flag-stripe {
+  height: 6px;
+  background: linear-gradient(90deg, var(--flag-red) 0 33.34%, var(--flag-yellow) 0 66.67%, var(--flag-green) 0);
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  min-height: 3.4rem;
+  padding: .85rem 1.6rem;
+  border-radius: 999px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: .01em;
+  line-height: 1;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.btn svg { width: 1.45rem; height: 1.45rem; flex: none; }
+.btn--wa { background: var(--flag-yellow); color: var(--navy-950); }
+.btn--wa:hover { background: #ffe94a; transform: translateY(-2px); }
+.btn--ghost { background: transparent; color: var(--white); border: 2px solid rgba(255, 255, 255, .6); }
+.btn--ghost:hover { background: rgba(255, 255, 255, .12); transform: translateY(-2px); }
+.btn--small { min-height: 2.6rem; padding: .55rem 1.1rem; font-size: 1.1rem; }
+.text-link { font-family: var(--display); font-weight: 600; font-size: 1.2rem; color: var(--white); text-underline-offset: 5px; }
+
+/* ---------- Topo ---------- */
+.site-head { position: sticky; top: 0; z-index: 30; background: var(--navy-950); }
+.site-head__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .7rem; }
+.brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--white); }
+.brand img { width: 46px; height: 46px; }
+.brand__name { font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 1; }
+.brand__full { display: none; font-family: var(--display); font-weight: 600; font-size: 1rem; color: var(--sky); line-height: 1.1; max-width: 15rem; }
+
+/* ---------- Herói ---------- */
+.hero { background: var(--navy-950); color: var(--white); padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(3rem, 7vw, 5.5rem); overflow: hidden; }
+.hero__grid { display: grid; gap: 3rem; align-items: center; }
+.hero__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.8rem, 9vw, 4.9rem); line-height: .98; letter-spacing: -.01em; }
+.hero__title span { display: block; text-wrap: balance; }
+.hero__title .hero__title-2 { color: var(--sky); }
+.hero__lead { margin-top: 1.5rem; font-size: 1.15rem; max-width: 34rem; color: #dbe7f2; }
+.hero__more { margin-top: 1.2rem; }
+.hero__actions { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; }
+.hero__note { margin-top: 1rem; font-size: .95rem; color: var(--sky); max-width: 30rem; }
+
+.stack { position: relative; width: min(100%, 460px); margin-inline: auto; aspect-ratio: 1 / 1.08; }
+.stack__img { position: absolute; width: 62%; height: auto; border-radius: 6px; box-shadow: 0 18px 40px rgba(0, 0, 0, .45); }
+.stack__img--back { left: 0; top: 0; transform: rotate(-4deg); }
+.stack__img--front { right: 0; bottom: 0; transform: rotate(3deg); animation: settle .9s .15s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes settle {
+  from { transform: translate(28px, 36px) rotate(9deg); opacity: 0; }
+  to { transform: rotate(3deg); opacity: 1; }
+}
+
+/* ---------- Fatos de confiança ---------- */
+.facts { background: var(--white); border-bottom: 1px solid var(--rule); }
+.facts__row { display: grid; gap: 0; }
+.fact { padding: 1.4rem 0; border-top: 1px solid var(--rule); }
+.fact:first-child { border-top: 0; }
+.fact__big { font-family: var(--display); font-weight: 800; font-size: 2.6rem; line-height: 1; color: var(--navy-700); }
+.fact__txt { margin-top: .35rem; font-size: .98rem; color: var(--ink-soft); }
+
+/* ---------- Seções ---------- */
+.section { padding-block: clamp(3.2rem, 8vw, 6rem); }
+.section--white { background: var(--white); }
+.section__title { text-wrap: balance; font-family: var(--display); font-weight: 700; font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.02; letter-spacing: -.005em; color: var(--navy-950); max-width: 22ch; }
+.section__intro { margin-top: 1rem; max-width: 40rem; color: var(--ink-soft); }
+
+/* Perguntas */
+.qa-list { margin-top: 2.4rem; }
+.qa { display: grid; gap: .8rem 3rem; padding-block: 1.8rem; border-top: 1px solid var(--rule); }
+.qa:last-child { border-bottom: 1px solid var(--rule); }
+.qa__q { font-family: var(--display); font-weight: 700; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.08; color: var(--navy-700); }
+.qa__a { max-width: 36rem; }
+
+/* Identidade */
+.identity { display: grid; gap: 2.6rem; align-items: center; }
+.identity__pics { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+.identity__pics img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 28px rgba(5, 43, 74, .22); }
+.identity__pics img:nth-child(2) { margin-top: 1.8rem; }
+.identity p + p { margin-top: 1rem; }
+.identity .section__title { max-width: 16ch; }
+.identity__body { margin-top: 1.2rem; max-width: 34rem; }
+
+/* Benefícios */
+.ledger { margin-top: 2.4rem; display: grid; gap: 0 3rem; }
+.ledger__item { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; padding-block: 1.3rem; border-top: 1px solid var(--rule); }
+.ledger__ico { width: 3.2rem; height: 3.2rem; border-radius: 10px; display: grid; place-items: center; font-size: 1.5rem; background: var(--paper); }
+.ledger__title { font-family: var(--display); font-weight: 700; font-size: 1.55rem; line-height: 1.1; color: var(--navy-950); }
+.ledger__desc { margin-top: .3rem; font-size: 1rem; color: var(--ink-soft); }
+.ledger__item--lead .ledger__title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.ledger__item--lead .ledger__ico { background: var(--navy-950); }
+.ledger__foot { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); font-size: .95rem; color: var(--ink-soft); }
+
+/* Fale com o presidente */
+.talk { background: var(--navy-950); color: var(--white); padding-block: clamp(3.2rem, 8vw, 5.5rem); }
+.talk__grid { display: grid; gap: 2rem; align-items: center; }
+.talk__big { font-family: var(--display); font-weight: 800; font-size: clamp(3.4rem, 11vw, 6.4rem); line-height: .92; color: var(--flag-yellow); text-wrap: balance; }
+.talk__title { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.05; }
+.talk__txt { margin-top: 1rem; color: #dbe7f2; max-width: 34rem; }
+.talk__actions { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* Linha do tempo */
+.timeline { margin-top: 2.4rem; }
+.tl { display: grid; grid-template-columns: 1fr; gap: .9rem 2rem; padding-block: 1.7rem; border-top: 1px solid var(--rule); align-items: start; }
+.tl:last-child { border-bottom: 1px solid var(--rule); }
+.tl__date { font-family: var(--display); font-weight: 700; font-size: 1.5rem; color: var(--navy-700); line-height: 1; }
+.tl__title { font-family: var(--display); font-weight: 700; font-size: 1.7rem; line-height: 1.08; color: var(--navy-950); }
+.tl__txt { margin-top: .4rem; font-size: 1rem; color: var(--ink-soft); max-width: 36rem; }
+.tl__thumb { width: 110px; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 6px; overflow: hidden; box-shadow: 0 6px 18px rgba(5, 43, 74, .2); }
+.tl__thumb img { width: 100%; height: auto; }
+.tl__thumb:hover { box-shadow: 0 8px 22px rgba(5, 43, 74, .32); }
+
+/* FAQ */
+.faq { margin-top: 2.2rem; max-width: 46rem; }
+.faq details { border-top: 1px solid var(--rule); }
+.faq details:last-child { border-bottom: 1px solid var(--rule); }
+.faq summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.2rem; cursor: pointer; list-style: none; font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.15; color: var(--navy-950); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; font-size: 2rem; font-weight: 600; line-height: 1; color: var(--navy-700); }
+.faq details[open] summary::after { content: "\2212"; }
+.faq__a { padding: 0 0 1.4rem; max-width: 40rem; color: var(--ink-soft); }
+
+/* Chamada final */
+.closing { background: var(--navy-700); color: var(--white); padding-block: clamp(3.2rem, 8vw, 5.5rem); }
+.closing__title { text-wrap: balance; font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 7vw, 4.4rem); line-height: 1; max-width: 18ch; }
+.closing__txt { margin-top: 1.2rem; max-width: 34rem; color: #dbe7f2; }
+.closing__actions { margin-top: 1.8rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+.closing__contacts { margin-top: 2rem; font-size: .98rem; color: #cfe0ef; }
+.closing__contacts p + p { margin-top: .3rem; }
+
+/* Rodapé */
+.site-foot { background: var(--navy-950); color: #b9cde0; padding-block: 2.6rem 5.5rem; font-size: .95rem; }
+.site-foot a { color: var(--white); }
+.site-foot__legal { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid rgba(169, 196, 221, .3); }
+.site-foot__legal strong { color: var(--white); }
+.site-foot p + p { margin-top: .25rem; }
+.site-foot__scholar { margin-top: 1.4rem; }
+
+/* Barra fixa (celular) */
+.sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: var(--navy-950); border-top: 3px solid var(--flag-yellow); transform: translateY(110%); transition: transform .25s ease; }
+.sticky-cta.is-visible { transform: translateY(0); }
+.sticky-cta .btn { width: 100%; }
+
+/* Ampliar imagem */
+.lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, 560px); }
+.lightbox::backdrop { background: rgba(5, 18, 32, .86); }
+.lightbox img { width: 100%; height: auto; max-height: 86vh; object-fit: contain; border-radius: 6px; }
+.lightbox__cap { margin-top: .7rem; color: #fff; font-size: .95rem; text-align: center; }
+
+/* ---------- Telas maiores ---------- */
+@media (min-width: 640px) {
+  .brand__full { display: block; }
+  .facts__row { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .fact { border-top: 0; border-left: 1px solid var(--rule); padding: 1.8rem 0 1.8rem 1.6rem; }
+  .fact:first-child { border-left: 0; padding-left: 0; }
+  .tl { grid-template-columns: 7.5rem 1fr 110px; }
+}
+@media (min-width: 900px) {
+  .hero__grid { grid-template-columns: 1.25fr .75fr; gap: 3.5rem; }
+  .qa { grid-template-columns: 5fr 6fr; padding-block: 2.2rem; }
+  .identity { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .ledger { grid-template-columns: 1fr 1fr; }
+  .ledger__item--lead { grid-column: 1 / -1; }
+  .talk__grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .sticky-cta { display: none; }
+  .site-foot { padding-bottom: 2.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .stack__img--front { animation: none; }
+  .btn, .sticky-cta { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="flag-stripe" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="wrap site-head__bar">
+    <a class="brand" href="#topo" aria-label="UNEPPE, início da página">
+      <img src="assets/img/logo-192.png" alt="" width="46" height="46">
+      <span>
+        <span class="brand__name">UNEPPE</span>
+        <span class="brand__full">União dos Escrivães de Polícia de Pernambuco</span>
+      </span>
+    </a>
+    <a class="btn btn--wa btn--small" data-wa="presidente" href="https://wa.me/5581998314033">Fale com o presidente</a>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- ===== Herói ===== -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <h1 class="hero__title">
+          <span>Você faz o processo valer.</span>
+          <span class="hero__title-2">Quem faz a sua proteção valer?</span>
+        </h1>
+        <p class="hero__lead">Na UNEPPE você tem consultas médicas, acompanhamento jurídico na Corregedoria, seguro de vida e auxílio funerário para você e sua família.</p>
+        <div class="hero__actions">
+          <a class="btn btn--wa" data-wa="presidente" href="https://wa.me/5581998314033">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Fale direto com o presidente
+          </a>
+          <a class="btn btn--ghost" data-wa="equipe" href="https://wa.me/5581991609802">Falar com a equipe</a>
+        </div>
+        <p class="hero__more"><a class="text-link" href="#beneficios">Ver o que está incluso</a></p>
+        <p class="hero__note">Sem formulário: você escolhe falar com o presidente ou com a equipe pelo WhatsApp.</p>
+      </div>
+
+      <div class="stack" aria-hidden="true">
+        <img class="stack__img stack__img--back" src="assets/img/posts/paridade-vitoria.jpg" alt="" width="600" height="750">
+        <img class="stack__img stack__img--front" src="assets/img/posts/escrivao-policial.jpg" alt="" width="600" height="716">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Fatos de confiança ===== -->
+  <section class="facts" aria-label="A UNEPPE em números">
+    <div class="wrap facts__row">
+      <div class="fact">
+        <p class="fact__big">1983</p>
+        <p class="fact__txt">Ano de fundação da UNEPPE, em 23 de março.</p>
+      </div>
+      <div class="fact">
+        <p class="fact__big">8</p>
+        <p class="fact__txt">Benefícios para você e sua família, de saúde a descontos.</p>
+      </div>
+      <div class="fact">
+        <p class="fact__big">20+</p>
+        <p class="fact__txt">Especialidades médicas, conforme a rede credenciada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Três perguntas ===== -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section__title">Três perguntas que todo escrivão acaba se fazendo</h2>
+      <div class="qa-list">
+        <div class="qa">
+          <p class="qa__q">E se abrirem um procedimento contra mim na Corregedoria?</p>
+          <p class="qa__a">Você não enfrenta isso sozinho. O associado conta com assistência jurídica para demandas da atividade policial, incluindo acompanhamento em procedimentos na Corregedoria e orientações sobre questões do exercício da função.</p>
+        </div>
+        <div class="qa">
+          <p class="qa__q">Quanto vou pagar por uma consulta com especialista?</p>
+          <p class="qa__a">Para o associado, sem custo: consultas em mais de 20 especialidades, conforme a rede credenciada, além de exames selecionados e plano odontológico completo.</p>
+        </div>
+        <div class="qa">
+          <p class="qa__q">Se acontecer o pior, minha família fica amparada?</p>
+          <p class="qa__a">O associado tem seguro de vida, e o auxílio funerário completo cobre o associado e os familiares de primeiro grau.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Escrivão é policial ===== -->
+  <section class="section section--white">
+    <div class="wrap identity">
+      <div>
+        <h2 class="section__title">Sem o escrivão, não há processo legal válido.</h2>
+        <div class="identity__body">
+          <p>O escrivão é a ponte entre a investigação policial e a Justiça. É ele quem garante que cada documento, cada registro e cada diligência tenham validade jurídica.</p>
+          <p>É por isso que a UNEPPE existe: para valorizar quem faz a justiça acontecer. Escrivão é policial, e é o “escritor oficial” da equipe.</p>
+        </div>
+      </div>
+      <div class="identity__pics">
+        <img src="assets/img/posts/escrivao-capa.jpg" alt="Arte da UNEPPE: o que faz um escrivão de polícia?" width="600" height="716" loading="lazy">
+        <img src="assets/img/posts/escrivao-funcoes.jpg" alt="Arte da UNEPPE com as funções do escrivão: documenta investigações, elabora boletins de ocorrência, acompanha diligências e participa de operações policiais" width="600" height="716" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Benefícios ===== -->
+  <section class="section" id="beneficios">
+    <div class="wrap">
+      <h2 class="section__title">O que você recebe como associado</h2>
+      <p class="section__intro">Oito benefícios para cuidar da sua saúde, da sua defesa e da sua família.</p>
+
+      <ul class="ledger">
+        <li class="ledger__item ledger__item--lead">
+          <span class="ledger__ico" aria-hidden="true">🩺</span>
+          <div>
+            <h3 class="ledger__title">Consultas médicas em mais de 20 especialidades</h3>
+            <p class="ledger__desc">Sem custo para o associado, conforme a rede credenciada.</p>
+          </div>
+        </li>
+        <li class="ledger__item">
+          <span class="ledger__ico" aria-hidden="true">🧪</span>
+          <div>
+            <h3 class="ledger__title">Exames selecionados</h3>
+            <p class="ledger__desc">Sem custo, conforme a disponibilidade da rede parceira.</p>
+          </div>
+        </li>
+        <li class="ledger__item">
+          <span class="ledger__ico" aria-hidden="true">😁</span>
+          <div>
+            <h3 class="ledger__title">Plano odontológico completo</h3>
+            <p class="ledger__desc">Cuidado com a saúde bucal para o associado.</p>
+          </div>
+        </li>
+        <li class="ledger__item">
+          <span class="ledger__ico" aria-hidden="true">⚖️</span>
+          <div>
+            <h3 class="ledger__title">Assistência jurídica da atividade policial</h3>
+            <p class="ledger__desc">Exclusivamente para demandas relacionadas à atividade policial: acompanhamento em procedimentos na Corregedoria, orientações e outras questões decorrentes do exercício da função.</p>
+          </div>
+        </li>
+        <li class="ledger__item">
+          <span class="ledger__ico" aria-hidden="true">🛡️</span>
+          <div>
+            <h3 class="ledger__title">Seguro de vida</h3>
+            <p class="ledger__desc">Proteção para o associado.</p>
+          </div>
+        </li>
+        <li class="ledger__item">
+          <span class="ledger__ico" aria-hidden="true">🕊️</span>
+          <div>
+            <h3 class="ledger__title">Auxílio funerário completo</h3>
+            <p class="ledger__desc">Para o associado e para os familiares de primeiro grau.</p>
+          </div>
+        </li>
+        <li class="ledger__item">
+          <span class="ledger__ico" aria-hidden="true">🛍️</span>
+          <div>
+            <h3 class="ledger__title">Clube de descontos</h3>
+            <p class="ledger__desc">Vantagens em empresas parceiras.</p>
+          </div>
+        </li>
+        <li class="ledger__item">
+          <span class="ledger__ico" aria-hidden="true">💙</span>
+          <div>
+            <h3 class="ledger__title">Planos de saúde com condições diferenciadas</h3>
+            <p class="ledger__desc">Negociados para oferecer valores mais acessíveis aos associados.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="ledger__foot">Os benefícios de saúde seguem as regras da rede credenciada e da rede parceira.</p>
+    </div>
+  </section>
+
+  <!-- ===== Fale com o presidente ===== -->
+  <section class="talk" id="falar">
+    <div class="wrap talk__grid">
+      <h2 class="talk__big">Fale direto com o presidente.</h2>
+      <div>
+        <p class="talk__title">Sem formulário, direto no WhatsApp.</p>
+        <p class="talk__txt">Pergunte sobre os benefícios, tire suas dúvidas sobre a rede credenciada e peça as condições de associação. Se preferir, a equipe da UNEPPE também atende pelo WhatsApp.</p>
+        <div class="talk__actions">
+          <a class="btn btn--wa" data-wa="presidente" href="https://wa.me/5581998314033">Fale direto com o presidente</a>
+          <a class="btn btn--ghost" data-wa="equipe" href="https://wa.me/5581991609802">Falar com a equipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Atuação ===== -->
+  <section class="section section--white" id="atuacao">
+    <div class="wrap">
+      <h2 class="section__title">Uma associação que aparece. Veja os registros.</h2>
+      <p class="section__intro">Mobilização, reuniões e presença nos espaços onde a categoria é decidida. Tudo publicado no Instagram da UNEPPE.</p>
+
+      <ol class="timeline">
+        <li class="tl">
+          <p class="tl__date">Dez 2025</p>
+          <div>
+            <h3 class="tl__title">Ciclo de palestras do Dia do Escrivão</h3>
+            <p class="tl__txt">A UNEPPE participou do ciclo de palestras sobre a modernização da Polícia Judiciária no Brasil, promovido pela UNEPOL-PA.</p>
+          </div>
+          <button class="tl__thumb" type="button" data-zoom="assets/img/posts/dia-do-escrivao.jpg" data-cap="UNEPPE presente no ciclo de palestras do Dia do Escrivão (dezembro de 2025)" aria-label="Ampliar imagem: ciclo de palestras do Dia do Escrivão">
+            <img src="assets/img/posts/dia-do-escrivao.jpg" alt="" width="600" height="716" loading="lazy">
+          </button>
+        </li>
+        <li class="tl">
+          <p class="tl__date">Maio 2025</p>
+          <div>
+            <h3 class="tl__title">Paridade salarial aprovada na Alepe</h3>
+            <p class="tl__txt">A Alepe aprovou a paridade salarial para policiais civis aposentados de Pernambuco. A UNEPPE destacou a vitória como fruto da mobilização de toda a categoria.</p>
+          </div>
+          <button class="tl__thumb" type="button" data-zoom="assets/img/posts/paridade-vitoria.jpg" data-cap="Alepe aprova paridade salarial para policiais civis aposentados de Pernambuco (maio de 2025)" aria-label="Ampliar imagem: aprovação da paridade salarial">
+            <img src="assets/img/posts/paridade-vitoria.jpg" alt="" width="600" height="750" loading="lazy">
+          </button>
+        </li>
+        <li class="tl">
+          <p class="tl__date">Abril 2025</p>
+          <div>
+            <h3 class="tl__title">Articulações pela PEC da Paridade</h3>
+            <p class="tl__txt">Reuniões nos gabinetes de deputados e com membros da PGE, a Procuradoria Geral do Estado, para acelerar o processo.</p>
+          </div>
+          <button class="tl__thumb" type="button" data-zoom="assets/img/posts/paridade-reuniao.jpg" data-cap="Reunião UNEPPE: atualizações sobre a paridade (abril de 2025)" aria-label="Ampliar imagem: reunião sobre a paridade">
+            <img src="assets/img/posts/paridade-reuniao.jpg" alt="" width="600" height="716" loading="lazy">
+          </button>
+        </li>
+        <li class="tl">
+          <p class="tl__date">Out 2024</p>
+          <div>
+            <h3 class="tl__title">Cooperação com a ADEPPE</h3>
+            <p class="tl__txt">UNEPPE e ADEPPE relembraram o encontro que fortalece o diálogo entre escrivães e delegados na Polícia Civil de Pernambuco.</p>
+          </div>
+          <button class="tl__thumb" type="button" data-zoom="assets/img/posts/adeppe.jpg" data-cap="Encontro entre UNEPPE e ADEPPE (outubro de 2024)" aria-label="Ampliar imagem: encontro com a ADEPPE">
+            <img src="assets/img/posts/adeppe.jpg" alt="" width="600" height="750" loading="lazy">
+          </button>
+        </li>
+        <li class="tl">
+          <p class="tl__date">Jul 2024</p>
+          <div>
+            <h3 class="tl__title">Grande passeata</h3>
+            <p class="tl__txt">Escrivães e associados foram às ruas para demonstrar a força e a união da categoria.</p>
+          </div>
+          <button class="tl__thumb" type="button" data-zoom="assets/img/posts/passeata.jpg" data-cap="Grande passeata da categoria (julho de 2024)" aria-label="Ampliar imagem: grande passeata">
+            <img src="assets/img/posts/passeata.jpg" alt="" width="600" height="716" loading="lazy">
+          </button>
+        </li>
+        <li class="tl">
+          <p class="tl__date">Mai 2024</p>
+          <div>
+            <h3 class="tl__title">Reunião com o Delegado Geral da Polícia Civil</h3>
+            <p class="tl__txt">Entre as pautas, um novo grupo de trabalho para implementar a Lei Orgânica Nacional e a criação de uma gratificação específica.</p>
+          </div>
+          <button class="tl__thumb" type="button" data-zoom="assets/img/posts/delegado-geral.jpg" data-cap="Reunião entre a UNEPPE e o Delegado Geral da Polícia Civil (maio de 2024)" aria-label="Ampliar imagem: reunião com o Delegado Geral">
+            <img src="assets/img/posts/delegado-geral.jpg" alt="" width="600" height="716" loading="lazy">
+          </button>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Perguntas frequentes ===== -->
+  <section class="section" id="duvidas">
+    <div class="wrap">
+      <h2 class="section__title">Dúvidas antes de se associar</h2>
+      <div class="faq">
+        <details>
+          <summary>A UNEPPE é um sindicato?</summary>
+          <p class="faq__a">Não. A UNEPPE é uma associação privada de escrivães de polícia. Atua pela valorização e pela defesa da categoria e oferece benefícios aos associados.</p>
+        </details>
+        <details>
+          <summary>O que a assistência jurídica cobre?</summary>
+          <p class="faq__a">Exclusivamente demandas relacionadas à atividade policial, como acompanhamento em procedimentos na Corregedoria, orientações e outras questões decorrentes do exercício da função. Demandas fora desse escopo não estão incluídas.</p>
+        </details>
+        <details>
+          <summary>Os benefícios de saúde têm custo?</summary>
+          <p class="faq__a">As consultas e os exames selecionados são sem custo para o associado, conforme a rede credenciada e a disponibilidade da rede parceira. Já os planos de saúde têm condições diferenciadas, negociadas para valores mais acessíveis aos associados.</p>
+        </details>
+        <details>
+          <summary>Quanto custa para me associar?</summary>
+          <p class="faq__a">Chame o presidente ou a equipe da UNEPPE no WhatsApp e peça as condições de associação.</p>
+        </details>
+        <details>
+          <summary>Como faço para me associar?</summary>
+          <p class="faq__a">Chame o presidente ou a equipe da UNEPPE no WhatsApp pelos botões desta página. Se preferir, ligue para o fixo (81)&nbsp;3272-6381 ou vá até a sede, na Rua da Aurora, 175, Boa Vista, Recife.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Chamada final ===== -->
+  <section class="closing" id="contato">
+    <div class="wrap">
+      <h2 class="closing__title">A UNEPPE já está ao lado do escrivão. Falta você ao lado dela.</h2>
+      <p class="closing__txt">Chame no WhatsApp, tire suas dúvidas e veja como funciona cada benefício antes de decidir.</p>
+      <div class="closing__actions">
+        <a class="btn btn--wa" data-wa="presidente" href="https://wa.me/5581998314033"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Fale direto com o presidente
+        </a>
+        <a class="btn btn--ghost" data-wa="equipe" href="https://wa.me/5581991609802">Falar com a equipe</a>
+      </div>
+      <div class="closing__contacts">
+        <p>WhatsApp do presidente: (81)&nbsp;99831-4033</p>
+        <p>WhatsApp da equipe: (81)&nbsp;99160-9802</p>
+        <p>Fixo: (81)&nbsp;3272-6381</p>
+        <p>Sede: Rua da Aurora, 175, Edifício Duarte Coelho, Bloco C, sala 704, Boa Vista, Recife</p>
+        <p>Instagram: <a href="https://www.instagram.com/uneppeoficial/" rel="noopener">@uneppeoficial</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__legal">
+      <p><strong>UNIAO DOS ESCRIVAES DE POLICIA DE PERNAMBUCO</strong></p>
+      <p>CNPJ: 12.860.243/0001-89</p>
+      <p>R DA AURORA, 175, EDIF DUARTE COELHO BLOCO C SALA 704/706</p>
+      <p>BOA VISTA, RECIFE - PE, CEP 50.060-010</p>
+      <p>Fixo: (81) 3272-6381 | WhatsApp do presidente: (81) 99831-4033 | WhatsApp da equipe: (81) 99160-9802 | Instagram: @uneppeoficial</p>
+      <p>&copy; 2026 UNEPPE. Todos os direitos reservados.</p>
+    </div>
+    <p class="site-foot__scholar">Procurando o cadastro da Bolsa Formação? <a href="https://uneppe.com.br/acaobolsa2026.1/">Clique aqui</a>.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn--wa" data-wa="presidente" href="https://wa.me/5581998314033">Fale direto com o presidente</a>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+  <img id="lightboxImg" alt="">
+  <p class="lightbox__cap" id="lightboxCap"></p>
+</dialog>
+
+<script>
+(function () {
+  /* ===== CONFIGURAÇÃO: números de WhatsApp e mensagens prontas ===== */
+  var CONTATOS = {
+    presidente: {
+      numero: "5581998314033", // formato: 55 + DDD + número, só dígitos
+      mensagem: "Olá, presidente! Sou escrivão(ã) de Polícia Civil e quero me associar à UNEPPE. Pode me explicar como funciona?"
+    },
+    equipe: {
+      numero: "5581991609802",
+      mensagem: "Olá! Sou escrivão(ã) de Polícia Civil e quero me associar à UNEPPE. Pode me explicar como funciona?"
+    }
+  };
+  /* ================================================================== */
+
+  document.querySelectorAll("[data-wa]").forEach(function (a) {
+    var c = CONTATOS[a.getAttribute("data-wa")] || CONTATOS.presidente;
+    a.setAttribute("href", "https://wa.me/" + c.numero + "?text=" + encodeURIComponent(c.mensagem));
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener");
+    a.addEventListener("click", function () {
+      try { if (window.fbq) { window.fbq("track", "Contact"); } } catch (e) {}
+    });
+  });
+
+  /* Barra fixa no celular: aparece depois do herói */
+  var bar = document.getElementById("stickyCta");
+  var hero = document.querySelector(".hero");
+  if (bar && hero && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      bar.classList.toggle("is-visible", !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(hero);
+  }
+
+  /* Ampliar imagens da linha do tempo */
+  var box = document.getElementById("lightbox");
+  var boxImg = document.getElementById("lightboxImg");
+  var boxCap = document.getElementById("lightboxCap");
+  document.querySelectorAll("[data-zoom]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      boxImg.src = btn.getAttribute("data-zoom");
+      boxImg.alt = btn.getAttribute("data-cap") || "";
+      boxCap.textContent = btn.getAttribute("data-cap") || "";
+      if (box.showModal) { box.showModal(); }
+    });
+  });
+  box.addEventListener("click", function () { box.close(); });
+})();
+</script>
+</body>
+</html>
