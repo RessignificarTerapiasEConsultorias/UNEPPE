@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Área interna | UNEPPE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#052B4A">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/forms.css">
+</head>
+<body>
+
+<div class="flag-stripe" aria-hidden="true"></div>
+<header class="site-head">
+  <div class="site-head__bar">
+    <a class="brand" href="../" aria-label="UNEPPE, voltar ao site">
+      <img src="../assets/img/logo-192.png" alt="" width="46" height="46">
+      <span>
+        <span class="brand__name">UNEPPE</span>
+        <span class="brand__full">União dos Escrivães de Polícia de Pernambuco</span>
+      </span>
+    </a>
+    <a class="head-link" href="../">Voltar ao site</a>
+  </div>
+</header>
+
+<main class="page page--narrow">
+
+  <div class="notice notice--warn" id="avisoConfig" role="alert" hidden>
+    A área interna será ativada quando o banco de dados for ligado.
+  </div>
+
+  <!-- Login -->
+  <section class="card" id="telaLogin">
+    <h1 class="card__title">Área interna</h1>
+    <p class="card__txt">Acesso restrito a quem a UNEPPE autorizou.</p>
+    <form id="formLogin" class="stack-fields" novalidate>
+      <div class="field" id="campo-email">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="username" required>
+      </div>
+      <div class="field" id="campo-senha">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" autocomplete="current-password" required>
+      </div>
+      <button class="btn-submit" type="submit" id="botaoEntrar">Entrar</button>
+      <p class="status" id="statusLogin" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Painel (depois do login) -->
+  <section id="telaPainel" hidden>
+    <div class="card">
+      <h1 class="card__title">Área interna</h1>
+      <p class="card__txt">Você entrou como <strong id="usuarioEmail"></strong>.</p>
+    </div>
+    <div class="card">
+      <h2 class="card__title">Cadastros da Bolsa Formação</h2>
+      <p class="card__txt">Em breve: a lista de cadastros e os documentos enviados vão aparecer aqui.</p>
+    </div>
+    <p style="margin-top:1.2rem"><button class="btn-secondary" type="button" id="botaoSair">Sair</button></p>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <p><strong>UNEPPE | União dos Escrivães de Polícia de Pernambuco</strong></p>
+</footer>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/area.js"></script>
+</body>
+</html>

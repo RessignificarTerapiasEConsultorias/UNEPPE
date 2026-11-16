@@ -101,6 +101,8 @@ ul, ol { padding: 0; list-style: none; }
 .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--white); }
 .brand img { width: 46px; height: 46px; }
 .brand__name { font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 1; }
+.site-head__actions { display: flex; align-items: center; gap: 1.3rem; }
+.head-login { display: none; font-family: var(--display); font-weight: 600; font-size: 1.15rem; color: var(--sky); text-underline-offset: 5px; }
 .brand__full { display: none; font-family: var(--display); font-weight: 600; font-size: 1rem; color: var(--sky); line-height: 1.1; max-width: 15rem; }
 
 /* ---------- Herói ---------- */
@@ -222,6 +224,7 @@ ul, ol { padding: 0; list-style: none; }
 /* ---------- Telas maiores ---------- */
 @media (min-width: 640px) {
   .brand__full { display: block; }
+  .head-login { display: inline; }
   .facts__row { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
   .fact { border-top: 0; border-left: 1px solid var(--rule); padding: 1.8rem 0 1.8rem 1.6rem; }
   .fact:first-child { border-left: 0; padding-left: 0; }
@@ -258,7 +261,10 @@ ul, ol { padding: 0; list-style: none; }
         <span class="brand__full">União dos Escrivães de Polícia de Pernambuco</span>
       </span>
     </a>
-    <a class="btn btn--wa btn--small" data-wa="presidente" href="https://wa.me/5581998314033">Fale com o presidente</a>
+    <div class="site-head__actions">
+      <a class="head-login" href="area-interna/">Área interna</a>
+      <a class="btn btn--wa btn--small" data-wa="presidente" href="https://wa.me/5581998314033">Fale com o presidente</a>
+    </div>
   </div>
 </header>
 
@@ -563,7 +569,8 @@ ul, ol { padding: 0; list-style: none; }
       <p>Fixo: (81) 3272-6381 | WhatsApp do presidente: (81) 99831-4033 | WhatsApp da equipe: (81) 99160-9802 | Instagram: @uneppeoficial</p>
       <p>&copy; 2026 UNEPPE. Todos os direitos reservados.</p>
     </div>
-    <p class="site-foot__scholar">Procurando o cadastro da Bolsa Formação? <a href="https://uneppe.com.br/acaobolsa2026.1/">Clique aqui</a>.</p>
+    <p class="site-foot__scholar">Procurando o cadastro da Bolsa Formação? <a href="acaobolsa2026.1/">Clique aqui</a>.</p>
+    <p class="site-foot__scholar"><a href="area-interna/">Área interna</a></p>
   </div>
 </footer>
 

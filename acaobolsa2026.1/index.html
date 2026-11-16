@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastro da Bolsa Formação | UNEPPE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#052B4A">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/forms.css">
+</head>
+<body>
+
+<div class="flag-stripe" aria-hidden="true"></div>
+<header class="site-head">
+  <div class="site-head__bar">
+    <a class="brand" href="../" aria-label="UNEPPE, voltar ao site">
+      <img src="../assets/img/logo-192.png" alt="" width="46" height="46">
+      <span>
+        <span class="brand__name">UNEPPE</span>
+        <span class="brand__full">União dos Escrivães de Polícia de Pernambuco</span>
+      </span>
+    </a>
+    <a class="head-link" href="../">Voltar ao site</a>
+  </div>
+</header>
+
+<main class="page">
+  <div class="intro">
+    <h1 class="intro__title">Cadastro para Participação na Ação da Bolsa Formação do Curso de Formação da Polícia Civil de Pernambuco 2025/2026.</h1>
+    <p class="cross">Faça parte da família UNEPPE: seja um associado! <a href="../#beneficios">Conheça os benefícios</a>.</p>
+  </div>
+
+  <div class="notice notice--warn" id="avisoConfig" role="alert" hidden>
+    Este formulário ainda não está recebendo cadastros. Volte em breve.
+  </div>
+
+  <div class="success" id="sucesso" role="status" hidden>
+    <h2 class="success__title">Cadastro enviado.</h2>
+    <p>Recebemos seus dados e documentos. Guarde este número de protocolo:</p>
+    <p><span class="success__code" id="protocolo"></span></p>
+    <p>Em caso de dúvida, fale com a UNEPPE pelo WhatsApp da equipe.</p>
+    <p><a class="btn-secondary" id="linkWhats" href="https://wa.me/5581991609802" target="_blank" rel="noopener">Falar com a equipe</a></p>
+  </div>
+
+  <form id="formBolsa" novalidate autocomplete="on">
+
+    <fieldset class="block">
+      <legend>1. Dados pessoais</legend>
+      <div class="grid2">
+        <div class="field field--wide" id="campo-nome">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" required>
+          <p class="field__error" id="erro-nome"></p>
+        </div>
+        <div class="field" id="campo-rg">
+          <label for="rg">Identidade (RG) *</label>
+          <input type="text" id="rg" name="rg" required>
+          <p class="field__error" id="erro-rg"></p>
+        </div>
+        <div class="field" id="campo-matricula">
+          <label for="matricula">Matrícula funcional *</label>
+          <input type="text" id="matricula" name="matricula" required>
+          <p class="field__error" id="erro-matricula"></p>
+        </div>
+        <div class="field" id="campo-cpf">
+          <label for="cpf">CPF *</label>
+          <input type="text" id="cpf" name="cpf" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" required>
+          <p class="field__error" id="erro-cpf"></p>
+        </div>
+        <div class="field" id="campo-telefone">
+          <label for="telefone">Telefone com WhatsApp *</label>
+          <input type="tel" id="telefone" name="telefone" inputmode="tel" placeholder="(81) 99999-9999" maxlength="15" autocomplete="tel-national" required>
+          <p class="field__error" id="erro-telefone"></p>
+        </div>
+        <div class="field field--wide" id="campo-email">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="nome@exemplo.com" autocomplete="email" required>
+          <p class="field__error" id="erro-email"></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="block">
+      <legend>2. Localização</legend>
+      <div class="grid2">
+        <div class="field" id="campo-cep">
+          <label for="cep">CEP *</label>
+          <input type="text" id="cep" name="cep" inputmode="numeric" placeholder="50000-000" maxlength="9" autocomplete="postal-code" required>
+          <p class="field__error" id="erro-cep"></p>
+        </div>
+        <div class="field field--wide" id="campo-endereco">
+          <label for="endereco">Endereço residencial completo *</label>
+          <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade" autocomplete="street-address" required>
+          <p class="field__error" id="erro-endereco"></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="block">
+      <legend>3. Upload de documentação</legend>
+      <p class="block__hint">Formato máximo aceito: 20 MB por arquivo. Aceitamos PDF, JPG, PNG e HEIC (foto do celular).</p>
+
+      <div class="file field" id="campo-identidade_frente">
+        <label for="identidade_frente">Identidade policial ou documento oficial (foto frente) *</label>
+        <input type="file" id="identidade_frente" name="identidade_frente" accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,application/pdf,image/*" required>
+        <p class="field__error" id="erro-identidade_frente"></p>
+      </div>
+      <div class="file field" id="campo-identidade_verso">
+        <label for="identidade_verso">Identidade policial ou documento oficial (foto verso) *</label>
+        <input type="file" id="identidade_verso" name="identidade_verso" accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,application/pdf,image/*" required>
+        <p class="field__error" id="erro-identidade_verso"></p>
+      </div>
+      <div class="file field" id="campo-comprovante_residencia">
+        <label for="comprovante_residencia">Comprovante de residência (com no máximo 90 dias de emissão) *</label>
+        <input type="file" id="comprovante_residencia" name="comprovante_residencia" accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,application/pdf,image/*" required>
+        <p class="field__error" id="erro-comprovante_residencia"></p>
+      </div>
+      <div class="file field" id="campo-comprovante_bolsa">
+        <label for="comprovante_bolsa">Comprovante de recebimento da bolsa (extrato bancário) *</label>
+        <input type="file" id="comprovante_bolsa" name="comprovante_bolsa" accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,application/pdf,image/*" required>
+        <p class="field__error" id="erro-comprovante_bolsa"></p>
+      </div>
+    </fieldset>
+
+    <fieldset class="block">
+      <legend>4. Declarações obrigatórias</legend>
+      <div class="check field" id="campo-decl1">
+        <input type="checkbox" id="decl1" name="decl1" required>
+        <label for="decl1">Tenho interesse em fazer parte da UNEPPE, conhecendo as ações desenvolvidas em benefício da Polícia Civil de Pernambuco. *</label>
+        <p class="field__error" id="erro-decl1"></p>
+      </div>
+      <div class="check field" id="campo-decl2">
+        <input type="checkbox" id="decl2" name="decl2" required>
+        <label for="decl2">Desejo conhecer e ter acesso às informações sobre os benefícios, serviços e convênios disponibilizados pela UNEPPE aos seus associados. *</label>
+        <p class="field__error" id="erro-decl2"></p>
+      </div>
+      <div class="check field" id="campo-decl3">
+        <input type="checkbox" id="decl3" name="decl3" required>
+        <label for="decl3">Manifesto meu interesse em aderir e participar das ações promovidas pela UNEPPE relacionadas à Bolsa Formação, autorizando a entidade a me representar e adotar as medidas necessárias à defesa desse direito. *</label>
+        <p class="field__error" id="erro-decl3"></p>
+      </div>
+    </fieldset>
+
+    <!-- campo-armadilha contra robôs: pessoas não veem nem preenchem -->
+    <div class="hp" aria-hidden="true">
+      <label>Não preencha este campo <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+
+    <p class="privacy">Os dados e documentos enviados são tratados pela UNEPPE para atender a esta ação e ao seu cadastro, e ficam acessíveis apenas a pessoas autorizadas pela entidade.</p>
+    <button class="btn-submit" type="submit" id="botaoEnviar">Enviar cadastro e documentos</button>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </form>
+</main>
+
+<footer class="site-foot">
+  <p><strong>UNEPPE | União dos Escrivães de Polícia de Pernambuco</strong></p>
+  <p>Edf. Duarte Coelho, R. da Aurora, 175, sala 704, bloco C, Recife, PE, CEP 50060-010</p>
+</footer>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/bolsa.js"></script>
+</body>
+</html>
